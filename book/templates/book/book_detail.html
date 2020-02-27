@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{object.title}} - {{object.publisher.name}}</p>
+<a href="../">voltar</a>
+<a href="{% url 'book:book_update' id=object.id %}">update</a>
+<a href="{% url 'book:book_delete' id=object.id %}">delete</a>
+{% endblock %}

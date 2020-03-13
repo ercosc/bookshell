@@ -2,7 +2,7 @@
 
 {% block content %}
 <p>{{object.title}} - {{object.publisher.name}}</p>
-<a href="../">voltar</a>
-<a href="{% url 'book:book_update' id=object.id %}">update</a>
-<a href="{% url 'book:book_delete' id=object.id %}">delete</a>
+<a href="../" class="btn btn-secondary">voltar</a>
+<a href="{% url 'book:book_update' id=object.id %}" class="btn btn-success">update</a>
+<a href="{% url 'book:book_delete' id=object.id %}" class="btn btn-danger">delete</a>
 {% endblock %}

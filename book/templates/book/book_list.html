@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="list-group">
 {% for instance in object_list %}
-<p><a href="{{instance.get_absolute_url}}">{{instance.title}} - {{instance.publisher.name}}</a></p>
+<a href="{{instance.get_absolute_url}}" type="button" class="list-group-item list-group-item-action">
+    {{instance.title}} - {{instance.publisher.name}}</a>
 {% endfor %}
-<a href="./create">Add new book</a>
+</div>
+<a href="./create" class="btn btn-primary">Add new book</a>
 {% endblock %}

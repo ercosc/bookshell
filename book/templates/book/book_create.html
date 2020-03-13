@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action='.' method='POST'>
+<form action='.' method='POST' >
     {% csrf_token %}
+    <div class="form-group">
     {{ form.as_p }}
-    <input type='submit' value='Save' />
+    </div>
+
+
+    <input type='submit' value='Save' class="btn btn-primary"/>
+    <a href="../" class="btn btn-secondary">Voltar</a>
 </form>
-<a href="../">Voltar</a>
+
 {% endblock %}
